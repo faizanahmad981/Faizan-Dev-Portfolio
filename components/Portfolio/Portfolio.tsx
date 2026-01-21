@@ -71,7 +71,7 @@ export default function Portfolio() {
                   group-hover:-translate-y-2 group-hover:scale-[1.02]"
                 >
                   <Image
-                    src={item.image}
+                    src={item.images[0]}
                     alt={item.title}
                     width={600}
                     height={400}
