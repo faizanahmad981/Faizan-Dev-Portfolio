@@ -1,16 +1,16 @@
 import {
 
-    carouselImg,
+   
    /*  joint office */
    jointOfficeMain,carouselJointOffice,carouselJointOffice1,
   /* rabbit hole */
  rabbithole,
   /* luminaXpert */
-  lumina, luminaXpertMain,luminaXpert1,luminaXpert2,luminaXpert3,
+  lumina,luminaXpert1,luminaXpert2,luminaXpert3,
   /* seller margin */
   sellerMargin, sellermargin,sellermargin1,sellermargin2,sellermargin3,sellermargin4,sellermargin5,
   /* fitness gym */
-  fitnessGym,fitnessGym1,fitnessGym2,  fitness,
+  fitnessGym1,fitnessGym2,  fitness,
   /* nexcent  */
    NexcentMain,Nexcent1,Nexcent2,
   /* real state */
@@ -58,6 +58,7 @@ export const portfolioItems: PortfolioItem[] = [
     description:
       "Seller margin is a platform that connect different platforms like Amazon, eBay etc and provide us real time data for these. I have made responsive UI for this project. I have integrated clerk for auth flow and now integrating stripe for subscriptions.",
     technologies: "Next JS ,Tailwind CSS ,Redux, API Integration",
+    link: "https://sellermargins-website.vercel.app/",
   },
   {
     id: 3,
@@ -68,6 +69,7 @@ export const portfolioItems: PortfolioItem[] = [
     description:
       "A Rabbithole is a dating app and admin panel is for admin to check the stats like total users on the app, total active user, top users by countries , Online users lists, help support messages and admin can reply to the tickets , When a new user registers to mobile app, that profile goes to pending tab in admin panel and Admin can check the profiles and he can accept or reject the profile. Admin can also see the list of approved profile. Super admin can add new admin and he can remove admin as well",
     technologies: "React.js, Redux,Tailwind CSS,",
+    link: "https://rabbit-hole-admin-panel-nu.vercel.app/sign-in",
   },
    {
     id: 4,
@@ -89,6 +91,7 @@ export const portfolioItems: PortfolioItem[] = [
     description:
       "Developed a complete front-end website for a fictional fitness and gym center as part of my learning and skill-building journey. Built a responsive and visually appealing interface using React.js and Bootstrap. Designed sections like home, services, trainers, membership plans, and contact forms. Focused on layout structure, component-based design, and cross-device responsiveness. This project helped enhance my understanding of front-end frameworks and sharpened my skills in building real-world business websites.",
     technologies: "React js Bootstrap",
+    link: "https://fitness-gym-seven.vercel.app/",
   },
    {
     id: 6,
@@ -99,6 +102,7 @@ export const portfolioItems: PortfolioItem[] = [
     description:
       "Developed a complete front-end website for LuminaXpert, a fictional remote software company, as a part of my personal learning and practice. Designed and implemented a responsive, modern UI using HTML, CSS, JavaScript, and React.js. Focused on clean layout, component reusability, and responsive design across all screen sizes. Practiced professional front-end development workflows and UI/UX principles. This project helped strengthen my skills in building full-scale website interfaces and enhanced my confidence in front-end development best practices",
     technologies: "React js Bootstrap",
+    link: "https://lumina-xpert.vercel.app/",
   },
   {
     id: 7,
@@ -129,6 +133,7 @@ export const portfolioItems: PortfolioItem[] = [
     description:
       "Foodi website Front-end one page website ",
     technologies: "React js Bootstrap",
+    link: "https://react-bootstrap-food-webapp.vercel.app/",
   },
   {
     id: 10,
@@ -139,6 +144,7 @@ export const portfolioItems: PortfolioItem[] = [
     description:
       "Real State website Front-end one page using React js HTML CSS bootstrap for beginner",
     technologies: "React js Bootstrap",
+    link: "https://realstate-woad-seven.vercel.app/",
   },
    {
     id: 11,
@@ -149,6 +155,7 @@ export const portfolioItems: PortfolioItem[] = [
     description:
       "Simple Nexcent website Front-end one page for beginner",
     technologies: "HTML CSS Bootstrap",
+     link: "https://nexcent-website-rho.vercel.app/",
   },
   
   

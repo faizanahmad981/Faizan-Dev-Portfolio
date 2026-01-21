@@ -1,13 +1,11 @@
 import About from "@/components/about/About";
 import Banner from "@/components/banner/Banner";
-
-import Image from "next/image";
 import ServicesMainPage from "./service/page";
 import TechnicalSkills from "@/components/technical-skills/TechnicalSkills";
 import Education from "@/components/education/Education";
 import Blog from "@/components/blog/Blog";
 import Contact from "@/components/contact/Contact";
-import Portfolio from "@/components/Portfolio/Portfolio";
+
 import PortfolioSection from "@/components/Portfolio/PortfolioSection";
 import Footer from "@/components/Footer/Footer";
 import Navbar from "@/components/Navbar/navbar";

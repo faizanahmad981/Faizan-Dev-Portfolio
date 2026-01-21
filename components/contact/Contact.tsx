@@ -1,43 +1,49 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 import emailjs from "@emailjs/browser";
 import { toast, Toaster } from "react-hot-toast";
 
-const Contact: React.FC = () => {
-  const [formData, setFormData] = useState({
-    from_name: "",
-    email_id: "",
-    subject_id: "",
-    message: "",
-  });
+import { contactSchema, ContactFormData } from "@/lib/contactSchema";
+import { TextInput } from "@/components/form/TextInput";
+import { TextArea } from "@/components/form/TextArea";
+import { SubmitButton } from "@/components/form/SubmitButton";
+import { useReveal } from "@/hooks/useReveal"; // <-- import your scroll reveal hook
 
+const Contact = () => {
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+  const reveal = useReveal(0.2); // Scroll reveal for the entire contact card
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<ContactFormData>({
+    resolver: zodResolver(contactSchema),
+  });
+
+  const onSubmit = async (data: ContactFormData) => {
     setLoading(true);
 
     try {
       await emailjs.send(
         "service_ovj4zzb",
         "template_6bvpefj",
-        formData,
+        data,
         "jpN6fK64PFeBdBUZB"
       );
+
       toast.success("Message sent successfully!", {
         style: { background: "#2EFFC1", color: "#000" },
       });
-      setFormData({ from_name: "", email_id: "", subject_id: "", message: "" });
-    } catch (error) {
-      console.error(error);
-      toast.error("Failed to send message. Try again.", {
+
+      reset();
+    } catch {
+      toast.error("Failed to send message", {
         style: { background: "#FF4C4C", color: "#fff" },
       });
     }
@@ -46,123 +52,67 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-16 bg-[rgb(var(--mesh-2))]">
-      <Toaster position="top-right" reverseOrder={false} />
-      <div className="container mx-auto px-4">
-        <div className="max-w-lg mx-auto">
+    <section id="contact" className="bg-[rgb(var(--mesh-2))] py-24">
+      <Toaster position="top-right" />
+
+      <div className="container mx-auto px-6">
+        <div className="max-w-2xl lg:max-w-3xl mx-auto">
+
+          {/* Apply scroll reveal */}
           <div
-            className="
-              contact-section
-              p-10
+            ref={reveal.ref}
+            className={`
+              p-8 md:p-10 lg:p-12
               rounded-2xl
               bg-[rgb(var(--bg-card))]
               shadow-[0_25px_60px_rgba(0,0,0,0.35)]
-              transition-all
-              duration-300
-              hover:shadow-[0_0_25px_rgba(46,255,193,0.45)]
+              border border-transparent
               hover:border-[rgb(var(--accent))]
-              border
-              border-transparent
-            "
+              hover:shadow-[0_0_35px_rgba(46,255,193,0.45)]
+              transition-all duration-700
+              transform
+              ${reveal.show ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"}
+            `}
           >
-            <h1 className="text-center text-3xl font-bold mb-6 text-[rgb(var(--text-primary))]">
+            
+            <h1 className="text-center text-4xl font-bold mb-8">
               Contact Me
             </h1>
 
-            <form onSubmit={handleSubmit} className="space-y-4">
-              {/** Name */}
-              <input
-                type="text"
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
+              <TextInput
                 name="from_name"
-                value={formData.from_name}
-                onChange={handleChange}
                 placeholder="Name"
-                required
-                className="
-                  w-full p-4 rounded-lg
-                  bg-[rgb(var(--bg-gray))]
-                  border border-[rgba(255,255,255,0.08)]
-                  text-[rgb(var(--text-primary))]
-                  focus:border-[rgb(var(--accent))]
-                  focus:shadow-[0_0_15px_rgba(46,255,193,0.45)]
-                  transition-all duration-300
-                  hover:shadow-[0_0_20px_rgba(46,255,193,0.45)]
-                "
-              />
-              {/** Email */}
-              <input
-                type="email"
-                name="email_id"
-                value={formData.email_id}
-                onChange={handleChange}
-                placeholder="Email"
-                required
-                className="
-                  w-full p-4 rounded-lg
-                  bg-[rgb(var(--bg-gray))]
-                  border border-[rgba(255,255,255,0.08)]
-                  text-[rgb(var(--text-primary))]
-                  focus:border-[rgb(var(--accent))]
-                  focus:shadow-[0_0_15px_rgba(46,255,193,0.45)]
-                  transition-all duration-300
-                  hover:shadow-[0_0_20px_rgba(46,255,193,0.45)]
-                "
-              />
-              {/** Subject */}
-              <input
-                type="text"
-                name="subject_id"
-                value={formData.subject_id}
-                onChange={handleChange}
-                placeholder="Subject"
-                required
-                className="
-                  w-full p-4 rounded-lg
-                  bg-[rgb(var(--bg-gray))]
-                  border border-[rgba(255,255,255,0.08)]
-                  text-[rgb(var(--text-primary))]
-                  focus:border-[rgb(var(--accent))]
-                  focus:shadow-[0_0_15px_rgba(46,255,193,0.45)]
-                  transition-all duration-300
-                  hover:shadow-[0_0_20px_rgba(46,255,193,0.45)]
-                "
-              />
-              {/** Message */}
-              <textarea
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                placeholder="Message"
-                rows={4}
-                required
-                className="
-                  w-full p-4 rounded-lg
-                  bg-[rgb(var(--bg-gray))]
-                  border border-[rgba(255,255,255,0.08)]
-                  text-[rgb(var(--text-primary))]
-                  focus:border-[rgb(var(--accent))]
-                  focus:shadow-[0_0_15px_rgba(46,255,193,0.45)]
-                  transition-all duration-300
-                  hover:shadow-[0_0_20px_rgba(46,255,193,0.45)]
-                "
+                register={register}
+                error={errors.from_name?.message}
               />
 
-              {/** Submit Button */}
-              <button
-                type="submit"
-                disabled={loading}
-                className="
-                  w-1/2 mx-auto block py-4 rounded-lg
-                  bg-gradient-to-r from-[rgb(var(--secondary-color))] to-[rgb(var(--accent))]
-                  text-black font-semibold
-                  hover:translate-y-1 hover:scale-105
-                  transition-transform duration-300
-                "
-              >
-                {loading ? "Sending..." : "Submit"}
-              </button>
+              <TextInput
+                name="email_id"
+                type="email"
+                placeholder="Email"
+                register={register}
+                error={errors.email_id?.message}
+              />
+
+              <TextInput
+                name="subject_id"
+                placeholder="Subject"
+                register={register}
+                error={errors.subject_id?.message}
+              />
+
+              <TextArea
+                name="message"
+                placeholder="Message"
+                register={register}
+                error={errors.message?.message}
+              />
+
+              <SubmitButton loading={loading} />
             </form>
           </div>
+
         </div>
       </div>
     </section>

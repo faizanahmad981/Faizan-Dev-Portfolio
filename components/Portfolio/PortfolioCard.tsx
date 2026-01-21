@@ -15,6 +15,18 @@ export default function PortfolioCard({ item, onClick }: Props) {
       onClick={onClick}
       className="portfolio-item cursor-pointer group"
     >
+        <span
+        className="
+          absolute top-0 left-0
+          w-0 h-1
+          rounded-t-xl
+          bg-gradient-to-r
+          from-[rgb(var(--secondary-color))]
+          to-[rgb(var(--neon-color-2))]
+          transition-all duration-300
+          group-hover:w-full
+        "
+      />
       <div className="relative overflow-hidden rounded-2xl shadow-xl
         transition-all duration-500
         group-hover:-translate-y-3 group-hover:scale-[1.02]

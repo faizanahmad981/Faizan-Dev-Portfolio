@@ -35,8 +35,8 @@ const educationData: EducationItem[] = [
 
 const Education: React.FC = () => {
   return (
-    <section id="education" className="py-16 bg-[rgb(var(--mesh-2))]">
-      <div className="container mx-auto px-4">
+    <section id="education" className=" bg-[rgb(var(--mesh-2))]">
+      <div className="container mx-auto px-6  py-12">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-[rgb(var(--text-primary))]">
             EDUCATION
@@ -47,8 +47,20 @@ const Education: React.FC = () => {
           {educationData.map((item, index) => (
             <div
               key={index}
-              className="relative flex items-start bg-[rgb(var(--bg-card))] p-6 h-64 rounded-xl border border-[rgba(255,255,255,0.08)] shadow-[0_20px_50px_rgba(0,0,0,0.35)] transition-transform duration-300 hover:-translate-y-2 hover:shadow-[0_30px_70px_rgba(46,255,193,0.25)] group"
+              className="relative flex items-start bg-[rgb(var(--bg-card))] p-6 h-64 rounded-xl border
+               border-[rgba(255,255,255,0.08)] shadow-[0_20px_50px_rgba(0,0,0,0.35)] transition-transform 
+               duration-300 hover:-translate-y-2 hover:shadow-[0_30px_70px_rgba(46,255,193,0.25)] group"
             >
+              <span
+                className="
+                  absolute top-0 left-0
+                  h-1 w-0
+                  bg-[rgb(var(--accent))]
+                  rounded-t-2xl
+                  transition-all duration-300
+                  group-hover:w-full
+                "
+              />
               {/* Timeline Dot */}
               <div className="w-5 h-5 rounded-full bg-gradient-to-tr from-[rgb(var(--secondary-color))] to-[rgb(var(--accent))] shadow-[0_0_15px_rgba(46,255,193,0.6)] mt-3 flex-shrink-0"></div>
 

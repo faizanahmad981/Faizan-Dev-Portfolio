@@ -35,7 +35,7 @@ export default function Footer() {
     <footer
       ref={footerRef}
       id="contact"
-      className="relative bg-[#0b0b14] overflow-hidden py-20"
+      className="relative bg-[#0b0b14] overflow-hidden py-12"
     >
       {/* Glow Background */}
       <div className="pointer-events-none absolute inset-0">

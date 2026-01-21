@@ -7,6 +7,7 @@ import Image, { StaticImageData } from "next/image";
 import blogImg from "@/assets/images/blog/blog.webp";
 import blog2Img from "@/assets/images/blog/blog2.webp";
 import entertainmentImg from "@/assets/images/blog/Entertainment.jpg";
+import { useReveal } from "@/hooks/useReveal";
 
 type Blog = {
   img: StaticImageData; // Use StaticImageData for Next.js Image imports
@@ -41,8 +42,8 @@ const blogs: Blog[] = [
 
 const Blog: React.FC = () => {
   return (
-    <section id="blog" className="py-16 bg-[rgb(var(--mesh-2))]">
-      <div className="container mx-auto px-4">
+    <section id="blog" className=" bg-[rgb(var(--mesh-2))]">
+      <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-[rgb(var(--text-primary))] mb-2">
@@ -56,36 +57,45 @@ const Blog: React.FC = () => {
 
         {/* Blog Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {blogs.map((blog, index) => (
-            <div
-              key={index}
-              className="group blog-card bg-[rgb(var(--bg-card))] rounded-2xl overflow-hidden
-                shadow-[0_10px_30px_rgba(0,0,0,0.25)] transition-transform duration-300
-                hover:-translate-y-3 hover:scale-105 hover:shadow-[0_25px_50px_rgba(46,255,193,0.25)]
-                cursor-pointer"
-            >
-              {/* Blog Image */}
-              <div className="relative w-full h-48">
-                <Image
-                  src={blog.img}
-                  alt={blog.alt}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-              </div>
+           {blogs.map((blog, index) => {
+            const reveal = useReveal(0.2 + index * 0.1); // staggered animation
+            return (
+              <div
+                key={index}
+                ref={reveal.ref}
+                className={`
+                  group blog-card bg-[rgb(var(--bg-card))] rounded-2xl overflow-hidden
+                  shadow-[0_10px_30px_rgba(0,0,0,0.25)]
+                  transition-all duration-700
+                  transform
+                  ${reveal.show ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"}
+                  hover:-translate-y-3 hover:scale-105 hover:shadow-[0_25px_50px_rgba(46,255,193,0.25)]
+                  cursor-pointer
+                `}
+              >
+                
+                {/* Blog Image */}
+                <div className="relative w-full h-48">
+                  <Image
+                    src={blog.img}
+                    alt={blog.alt}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                </div>
 
-              {/* Blog Content */}
-              <div className="p-6">
-                <h5 className="blog-card-title text-xl font-bold text-[rgb(var(--text-primary))] mb-2
-                  transition-colors group-hover:text-[rgb(var(--accent))]">
-                  {blog.title}
-                </h5>
-                <p className="blog-card-text text-[rgb(var(--text-gray))] leading-relaxed">
-                  {blog.description}
-                </p>
+                {/* Blog Content */}
+                <div className="p-6">
+                  <h5 className="blog-card-title text-xl font-bold text-[rgb(var(--text-primary))] mb-2 transition-colors group-hover:text-[rgb(var(--accent))]">
+                    {blog.title}
+                  </h5>
+                  <p className="blog-card-text text-[rgb(var(--text-gray))] leading-relaxed">
+                    {blog.description}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

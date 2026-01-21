@@ -6,9 +6,9 @@ export default function TechnicalSkills() {
   return (
     <section
       id="technical-skills"
-      className="py-24 bg-(--gradient-banner-mesh)"
+      className="  bg-(--gradient-banner-mesh)"
     >
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl container mx-auto px-6 py-12">
 
         {/* HEADER */}
         <div className="text-center mb-14">

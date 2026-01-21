@@ -10,8 +10,8 @@ export default function PortfolioSection() {
   const [selected, setSelected] = useState<PortfolioItem | null>(null);
 
   return (
-    <section id="portfolio" className="py-20 bg-[rgb(var(--mesh-2))]">
-      <div className="container mx-auto px-4">
+    <section id="portfolio" className=" bg-[rgb(var(--mesh-2))]">
+      <div className="container mx-auto px-6 py-12">
 
         {/* Tabs */}
         <div className="flex  gap-4 mb-10">
@@ -32,7 +32,9 @@ export default function PortfolioSection() {
         </div>
 
         {/* Grid */}
+        
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+          
           {portfolioItems
             .filter(i => i.category === activeTab)
             .map(item => (

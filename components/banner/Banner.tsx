@@ -47,7 +47,10 @@ export default function Banner({
 
     function eraseRole() {
       if (roleRef.current && charIndex > 0) {
-        roleRef.current.textContent = roles[roleIndex].substring(0, charIndex - 1);
+        roleRef.current.textContent = roles[roleIndex].substring(
+          0,
+          charIndex - 1,
+        );
         charIndex--;
         setTimeout(eraseRole, 60);
       } else {
@@ -61,15 +64,16 @@ export default function Banner({
   }, [roles, titleText]);
 
   return (
-    <section className="relative  min-h-screen flex items-center 
+    <section
+      className=" relative  min-h-screen flex items-center 
     z-10 pt-28 bg-no-repeat bg-top bg-cover
-    ">
+    "
+    >
       {/* Background layer */}
       <div className="absolute inset-0 hero-bg -z-10" />
 
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-6 ">
         <div className="flex flex-col-reverse lg:flex-row items-center min-h-screen gap-8">
-
           {/* TEXT CONTENT */}
           <div className="lg:w-7/12 text-center lg:text-left">
             <div id="intro">
@@ -87,20 +91,65 @@ export default function Banner({
               </h5>
             </div>
 
-            {/* BUTTONS */}
-            <div className="mt-8 flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
-              <a
-                href={`mailto:${email}`}
-                className="px-6 py-3 rounded-lg bg-[rgb(var(--accent))] text-black font-semibold hover:scale-105 transition-transform"
+            <div className="  mt-8 flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+              {/* Hire Me */}
+              <button
+                type="button"
+                onClick={() => {
+                  const emaill = email;
+                  const subject = "Hiring Inquiry";
+                  const body =
+                    "Hi Faizan,%0D%0A%0D%0AI came across your portfolio and would like to discuss an opportunity.";
+
+                  window.open(
+                    `https://mail.google.com/mail/?view=cm&fs=1&to=${emaill}&su=${subject}&body=${body}`,
+                    "_blank",
+                  );
+                }}
+                className="
+    px-6 py-3 rounded-lg
+    bg-[rgb(var(--accent))]
+    text-black font-semibold
+
+    transition-all duration-300
+    hover:scale-105
+    hover:shadow-[0_0_25px_rgba(46,255,193,0.65)]
+
+    active:bg-transparent
+    active:text-[rgb(var(--accent))]
+    active:border
+    active:border-[rgb(var(--accent))]
+    active:scale-95
+
+    focus:outline-none
+    focus:border
+    focus:border-[rgb(var(--accent))]
+    focus:shadow-[0_0_30px_rgba(46,255,193,0.8)]
+  "
               >
                 Hire Me
-              </a>
+              </button>
+
+              {/* LinkedIn */}
               <a
                 href={linkedin}
                 target="_blank"
-                className="px-6 py-3 rounded-lg border border-[rgb(var(--accent))] text-white font-semibold hover:scale-105 transition-transform"
+                rel="noopener noreferrer"
+                className="
+      px-6 py-3 rounded-lg
+      border border-[rgb(var(--accent))]
+      text-white font-semibold
+      transition-all duration-300
+      hover:bg-[rgb(var(--accent))]
+      hover:text-black
+      hover:scale-105
+      hover:shadow-[0_0_25px_rgba(46,255,193,0.65)]
+      active:scale-95
+      focus:outline-none
+      focus:shadow-[0_0_30px_rgba(46,255,193,0.8)]
+    "
               >
-                Linkedin
+                LinkedIn
               </a>
             </div>
           </div>

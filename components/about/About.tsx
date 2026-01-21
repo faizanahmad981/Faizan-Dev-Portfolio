@@ -75,10 +75,10 @@ export default function About() {
         bg-[radial-gradient(circle_at_top_left,rgb(var(--mesh-1)),rgb(var(--bg-main)))]
       "
     >
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6 ">
 
         {/* ================= TOP GRID ================= */}
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2  items-center ">
 
           {/* ---------- IMAGE ---------- */}
           <div
@@ -94,8 +94,8 @@ export default function About() {
               width={450}
               height={600}
               className="
-                mx-auto rounded-2xl
-                border-2 border-dashed border-[rgb(var(--accent))]
+                rounded-2xl
+                border-2  border-[rgb(var(--accent))]
                 shadow-[0_20px_40px_rgba(0,0,0,0.35)]
                 transition-transform duration-500
                 hover:scale-105 hover:-rotate-1
@@ -188,35 +188,41 @@ export default function About() {
               </h4>
 
               <div className="flex flex-wrap justify-center gap-6">
-                {category.skills.map((skill) => (
-                  <div
-                    key={skill.name}
-                    className="
-                      w-[160px] h-[110px]
-                      bg-[rgb(var(--bg-card))]
-                      border border-white/10
-                      rounded-xl
-                      flex flex-col items-center justify-center
-                      text-[rgb(var(--accent))]
-                      cursor-pointer
-                      transition-all duration-300
-                      hover:-translate-y-2
-                      hover:border-[rgb(var(--accent))]
-                      hover:shadow-[0_12px_30px_rgb(var(--accent)/0.25)]
-                    "
-                  >
-                    <Image
-                      src={skill.icon}
-                      alt={skill.name}
-                      width={38}
-                      height={38}
-                      className="mb-2"
-                    />
-                    <span className="text-sm font-medium text-center">
-                      {skill.name}
-                    </span>
-                  </div>
-                ))}
+              {category.skills.map((skill, idx) => {
+  const cardReveal = useReveal(0.2 + idx * 0.05); // stagger each card
+  return (
+    <div
+      key={skill.name}
+      ref={cardReveal.ref}
+      className={`
+        w-[200px] h-[110px]
+        bg-[rgb(var(--bg-card))]
+        border border-white/10
+        rounded-xl
+        flex flex-col items-center justify-center
+        text-[rgb(var(--accent))]
+        cursor-pointer
+        transition-all duration-700
+        ${cardReveal.show ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"}
+        hover:-translate-y-2
+        hover:border-[rgb(var(--accent))]
+        hover:shadow-[0_12px_30px_rgb(var(--accent)/0.25)]
+      `}
+    >
+      <Image
+        src={skill.icon}
+        alt={skill.name}
+        width={38}
+        height={38}
+        className="mb-2"
+      />
+      <span className="text-sm font-medium text-center">
+        {skill.name}
+      </span>
+    </div>
+  );
+})}
+
               </div>
             </div>
           ))}

@@ -40,10 +40,10 @@ import ImageClassification1 from "@/assets/images/portfolio/CNN-Image-Classifica
 import ImageClassification2 from "@/assets/images/portfolio/CNN-Image-Classification/carousal-2.png";
 
 
-import Efamily from "@/assets/images/portfolio/eFamily/Instagram post - 1.png";
-import Efamily1 from "@/assets/images/portfolio/eFamily/Pixel 7a-1.png";
-import Efamily2 from "@/assets/images/portfolio/eFamily/Pixel 7a-2.png";
-import Efamily3 from "@/assets/images/portfolio/eFamily/Pixel 7a.png";
+import Efamily from "@/assets/images/portfolio/eFamily/eFamily.png";
+import Efamily1 from "@/assets/images/portfolio/eFamily/efamily1.png";
+import Efamily2 from "@/assets/images/portfolio/eFamily/efamily2.png";
+import Efamily3 from "@/assets/images/portfolio/eFamily/efamily3.png";
 export {
   
     rabbithole, fitnessGym,fitnessGym1,fitnessGym2,NexcentMain,Nexcent1,Nexcent2,foodiwebsiteMain,realstateMain ,
