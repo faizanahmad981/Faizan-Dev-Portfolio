@@ -39,6 +39,7 @@ import Efamily from "@/assets/images/portfolio/efamily/efamily.png";
 import Efamily1 from "@/assets/images/portfolio/efamily/efamily1.png";
 import Efamily2 from "@/assets/images/portfolio/efamily/efamily2.png";
 import Efamily3 from "@/assets/images/portfolio/efamily/efamily3.png";
+
 export {
   
     rabbithole, fitnessGym,fitnessGym1,fitnessGym2,NexcentMain,Nexcent1,Nexcent2,foodiwebsiteMain,realstateMain ,
