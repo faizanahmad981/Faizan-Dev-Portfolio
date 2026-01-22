@@ -1,13 +1,8 @@
 /*  projects */
 import carouselImg from "@/assets/images/portfolio/truthkeep/carousal-1.png"
-
-/* import truthkeep1 from "@/assets/images/portfolio/truthKeep/1.png";
-
-import truthkeep2 from "@/assets/images/portfolio/truthkeep/2.jpg"
-import truthkeep3 from "@/assets/images/portfolio/truthkeep/3.jpg" */
 import jointOfficeMain from "@/assets/images/portfolio/mockups/joint-office-Detector.png"
-import carouselJointOffice from "@/assets/images/portfolio/Joint-Office-Detector/carusal-1.jpg"
-import carouselJointOffice1 from "@/assets/images/portfolio/Joint-Office-Detector/carusal.jpg"
+import carouselJointOffice from "@/assets/images/portfolio/joint-office-detector/carusal-1.jpg"
+import carouselJointOffice1 from "@/assets/images/portfolio/joint-office-detector/carusal.jpg"
 import sellermargin from "@/assets/images/portfolio/seller-margin/crm.png"
 import sellermargin1 from "@/assets/images/portfolio/seller-margin/crm1.png"
 import sellermargin2 from "@/assets/images/portfolio/seller-margin/crm2.png"
@@ -19,9 +14,9 @@ import luminaXpertMain from "@/assets/images/portfolio/luminaXper/Mockupitem.png
 import luminaXpert1 from "@/assets/images/portfolio/luminaXper/1.png"
 import luminaXpert2 from "@/assets/images/portfolio/luminaXper/2.png"
 import luminaXpert3 from "@/assets/images/portfolio/luminaXper/3.png"
-import fitnessGym from "@/assets/images/portfolio/fitness-Gym/Mockupitem.png"
-import fitnessGym1 from "@/assets/images/portfolio/fitness-Gym/1.png"
-import fitnessGym2 from "@/assets/images/portfolio/fitness-Gym/2.png"
+import fitnessGym from "@/assets/images/portfolio/fitness-gym/Mockupitem.png"
+import fitnessGym1 from "@/assets/images/portfolio/fitness-gym/1.png"
+import fitnessGym2 from "@/assets/images/portfolio/fitness-gym/2.png"
 import NexcentMain  from "@/assets/images/portfolio/nexcent/Mockupitem.png"
 import Nexcent1  from "@/assets/images/portfolio/nexcent/1.png"
 import Nexcent2  from "@/assets/images/portfolio/nexcent/2.png"
