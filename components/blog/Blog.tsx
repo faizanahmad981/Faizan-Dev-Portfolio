@@ -6,7 +6,7 @@ import Image, { StaticImageData } from "next/image";
 // Import images
 import blogImg from "@/assets/images/blog/blog.webp";
 import blog2Img from "@/assets/images/blog/blog2.webp";
-import entertainmentImg from "@/assets/images/blog/Entertainment.jpg";
+import entertainmentImg from "@/assets/images/blog/entertainment.jpg";
 import { useReveal } from "@/hooks/useReveal";
 
 type Blog = {
