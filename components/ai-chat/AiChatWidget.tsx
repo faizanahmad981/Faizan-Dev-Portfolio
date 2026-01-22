@@ -18,23 +18,56 @@ export default function AIChatWidget() {
 
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [loading, setLoading] = useState(false);
-  const abortControllerRef = useRef<AbortController | null>(null);
 
   const sendMessage = async (text: string) => {
     if (!text.trim()) return;
 
+    // Add user message
     const userMsg: ChatMessage = { id: nanoid(), role: "user", text };
     setMessages(prev => [...prev, userMsg]);
     setLoading(true);
 
-    // Use local AI response
-    const response = getLocalAIResponse(text);
+    // Get AI response
+    let response = getLocalAIResponse(text);
 
+    // Mini stats/highlights based on question keywords
+    const statsResponses: Record<string, string> = {
+      "experience": "💼 Faizan has 2 years of hands-on experience in Web Development, React, Next.js, API integrations, and frontend architectures.",
+      "react": "⚛️ Faizan has 2 years of professional experience building React applications.",
+      "next": "🚀 Faizan has 2 years of experience building scalable Next.js applications with SSR & SSG.",
+      "api": "🔗 Faizan has 2 years of experience integrating REST & GraphQL APIs in frontend projects.",
+    };
+
+    for (const key in statsResponses) {
+      if (text.toLowerCase().includes(key)) {
+        response += "\n\n" + statsResponses[key];
+      }
+    }
+
+    // Project cards / links in chat
+    const projectLinks: Record<string, string> = {
+      "truthkeep": "[TruthKeep AI](https://www.truthkeep.ai/)",
+      "seller": "[Seller Margin CRM](https://sellermargins-website.vercel.app/)",
+      "rabbit": "[Rabbit Hole Dashboard](https://rabbit-hole-admin-panel-nu.vercel.app/sign-in)",
+      "lumina": "[Lumina Xpert](https://lumina-xpert.vercel.app/)",
+      "real estate": "[Real Estate Website](https://realstate-woad-seven.vercel.app/)",
+      "fitness": "[Fitness Gym Website](https://fitness-gym-seven.vercel.app/)",
+      "nexcent": "[Nexcent Onepage](https://nexcent-website-rho.vercel.app/)",
+      "foodi": "[Foodi Onepage](https://react-bootstrap-food-webapp.vercel.app/)",
+    };
+
+    for (const key in projectLinks) {
+      if (text.toLowerCase().includes(key)) {
+        response += `\n\n🔗 Project Link: ${projectLinks[key]}`;
+      }
+    }
+
+    // Simulate AI thinking
     setTimeout(() => {
       const aiMsg: ChatMessage = { id: nanoid(), role: "ai", text: response };
       setMessages(prev => [...prev, aiMsg]);
       setLoading(false);
-    }, 500); // simulate thinking
+    }, 500);
   };
 
   // Step 2: Add welcome message based on userType
@@ -79,7 +112,7 @@ export default function AIChatWidget() {
       <AIChatIcon onClick={() => setOpen(o => !o)} />
 
       {open && (
-        <div className="fixed bottom-24 right-6 z-50 w-[340px] h-[460px] bg-[rgb(var(--bg-light))] rounded-2xl shadow-[0_0_35px_rgba(0,0,0,0.4)] flex flex-col">
+        <div className="fixed bottom-24 right-6 z-50 w-[360px] h-[500px] bg-[rgb(var(--bg-light))] rounded-2xl shadow-[0_0_35px_rgba(0,0,0,0.4)] flex flex-col">
           <div className="p-3 font-semibold bg-[rgb(var(--mesh-color-3))] flex justify-between">
             Portfolio AI Assistant
             <button onClick={() => setOpen(false)}>✖</button>
