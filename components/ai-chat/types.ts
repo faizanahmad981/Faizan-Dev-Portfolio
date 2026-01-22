@@ -1,3 +1,4 @@
+// types.ts
 export type ChatRole = "user" | "ai";
 
 export interface ChatMessage {

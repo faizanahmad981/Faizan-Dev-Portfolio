@@ -8,33 +8,29 @@ type Props = {
   loading: boolean;
 };
 
-export default function AIChatMessages({ messages, loading }: Props) {
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    ref.current?.scrollTo({
-      top: ref.current.scrollHeight,
-      behavior: "smooth",
-    });
-  }, [messages, loading]);
-
+export default function AIChatMessages({
+  messages,
+  loading,
+}: {
+  messages: ChatMessage[];
+  loading: boolean;
+}) {
   return (
-    <div ref={ref} className="flex-1 overflow-y-auto p-4 space-y-3 text-sm">
+    <div className="flex-1 p-3 overflow-y-auto space-y-2 bg-[rgb(var(--mesh-color-3))]">
       {messages.map(msg => (
         <div
           key={msg.id}
-          className={`max-w-[85%] p-3 rounded-xl ${
-            msg.role === "user"
-              ? "ml-auto bg-gradient-to-r from-cyan-400 to-emerald-400 text-black font-medium"
-              : "bg-[rgb(var(--bg-gray))] border-l-4 border-[rgb(var(--secondary-color))]"
+          className={`p-2 rounded-lg ${
+            msg.role === "ai"
+              ? "bg-[rgb(var(--bg-gray))] text-[rgb(var(--text-primary))] border-l-4 border-[rgb(var(--secondary-color))]"
+              : "bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-right"
           }`}
         >
           {msg.text}
         </div>
       ))}
-
       {loading && (
-        <div className="bg-[rgb(var(--bg-gray))] p-3 rounded-xl w-fit animate-pulse">
+        <div className="p-2 rounded-lg bg-[rgb(var(--bg-gray))] text-[rgb(var(--text-primary))]">
           AI is thinking...
         </div>
       )}
