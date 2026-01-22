@@ -34,16 +34,16 @@ import sellerMargin from "@/assets/images/portfolio/mockups/Seller-margin.png"
 import truthkeep from "@/assets/images/portfolio/mockups/TruthKeep.png"
 import rabbithole from "@/assets/images/portfolio/mockups/RabbitHole.png"
 
-import ImageClassificationMain from "@/assets/images/portfolio/CNN-Image-Classification/cnn.png";
-import ImageClassification from "@/assets/images/portfolio/CNN-Image-Classification/carousal.png";
-import ImageClassification1 from "@/assets/images/portfolio/CNN-Image-Classification/carousal-1.png";
-import ImageClassification2 from "@/assets/images/portfolio/CNN-Image-Classification/carousal-2.png";
+import ImageClassificationMain from "@/assets/images/portfolio/cnn-image-classification/cnn.png";
+import ImageClassification from "@/assets/images/portfolio/cnn-image-classification/carousal.png";
+import ImageClassification1 from "@/assets/images/portfolio/cnn-image-classification/carousal-1.png";
+import ImageClassification2 from "@/assets/images/portfolio/cnn-image-classification/carousal-2.png";
 
 
-import Efamily from "@/assets/images/portfolio/eFamily/eFamily.png";
-import Efamily1 from "@/assets/images/portfolio/eFamily/efamily1.png";
-import Efamily2 from "@/assets/images/portfolio/eFamily/efamily2.png";
-import Efamily3 from "@/assets/images/portfolio/eFamily/efamily3.png";
+import Efamily from "@/assets/images/portfolio/efamily/efamily.png";
+import Efamily1 from "@/assets/images/portfolio/efamily/efamily1.png";
+import Efamily2 from "@/assets/images/portfolio/efamily/efamily2.png";
+import Efamily3 from "@/assets/images/portfolio/efamily/efamily3.png";
 export {
   
     rabbithole, fitnessGym,fitnessGym1,fitnessGym2,NexcentMain,Nexcent1,Nexcent2,foodiwebsiteMain,realstateMain ,
