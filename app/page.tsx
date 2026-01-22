@@ -9,6 +9,7 @@ import Contact from "@/components/contact/Contact";
 import PortfolioSection from "@/components/Portfolio/PortfolioSection";
 import Footer from "@/components/Footer/Footer";
 import Navbar from "@/components/Navbar/navbar";
+import AiChatWidget from "@/components/ai-chat/AiChatWidget";
 
 export default function Home() {
   return (
@@ -27,6 +28,8 @@ export default function Home() {
       <Blog/>
       <Contact/>
       <Footer/>
+
+         <AiChatWidget />
     
     
     
