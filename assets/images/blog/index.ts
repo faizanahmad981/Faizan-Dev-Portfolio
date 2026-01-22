@@ -1,7 +1,9 @@
-import blogImg from "@/assets/images/blog/blog.webp"
-import blog2Img from "@/assets/images/blog/blog2.webp"
-import entertainmentImg from "@/assets/images/blog/entertainment.jpg"
+import blogImg from "./blog.webp";
+import blog2Img from "./blog2.webp";
+import entertainmentImg from "./entertainment.jpg";
+
 export {
-   /* blog */
-   blog2Img,blogImg,entertainmentImg,
+  blogImg,
+  blog2Img,
+  entertainmentImg,
 };

@@ -4,9 +4,7 @@ import React from "react";
 import Image, { StaticImageData } from "next/image";
 
 // Import images
-import blogImg from "@/assets/images/blog/blog.webp";
-import blog2Img from "@/assets/images/blog/blog2.webp";
-import entertainmentImg from "@/assets/images/blog/entertainment.jpg";
+import { blogImg,blog2Img,entertainmentImg } from "@/assets/images/blog";
 import { useReveal } from "@/hooks/useReveal";
 
 type Blog = {
