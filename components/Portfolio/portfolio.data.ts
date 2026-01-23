@@ -4,7 +4,7 @@ import {
    /*  joint office */
    jointOfficeMain,carouselJointOffice,carouselJointOffice1,
   /* rabbit hole */
- rabbithole,
+ rabbithole,rabbithole1,
   /* luminaXpert */
   lumina,luminaXpert1,luminaXpert2,luminaXpert3,
   /* seller margin */
@@ -16,14 +16,15 @@ import {
   /* real state */
   realstateMain ,
  realstate,
-  /* truth keep */
-  truthkeep,
+ 
   /* foodi website */
    foodiwebsiteMain,
    /*  image classification */
    ImageClassificationMain,ImageClassification,ImageClassification1,ImageClassification2,
   /* efamily */
-   Efamily,Efamily1,Efamily2,Efamily3
+   Efamily,Efamily1,Efamily2,Efamily3,
+   rabbithole2,
+   rabbithole3
   } from "@/assets/images/portfolio";
 import { StaticImageData } from "next/image";
 export type PortfolioItem = {
@@ -44,7 +45,7 @@ export const portfolioItems: PortfolioItem[] = [
     title: "Seller Margin website & CRM",
     category: "popular",
     cover: sellerMargin,
-    images: [sellermargin, sellermargin1, sellermargin2, sellermargin3, sellermargin4,sellermargin5  ],
+    images: [sellermargin1, sellermargin2, sellermargin3, sellermargin4,sellermargin5  ],
     description:
       "Seller margin is a platform that connect different platforms like Amazon, eBay etc and provide us real time data for these. I have made responsive UI for this project. I have integrated clerk for auth flow and now integrating stripe for subscriptions.",
     technologies: "Next JS ,Tailwind CSS ,Redux, API Integration",
@@ -55,7 +56,7 @@ export const portfolioItems: PortfolioItem[] = [
     title: "Rabbit Hole",
     category: "popular",
     cover: rabbithole,
-    images: [rabbithole, rabbithole, rabbithole],
+    images: [rabbithole1, rabbithole2, rabbithole3],
     description:
       "A Rabbithole is a dating app and admin panel is for admin to check the stats like total users on the app, total active user, top users by countries , Online users lists, help support messages and admin can reply to the tickets , When a new user registers to mobile app, that profile goes to pending tab in admin panel and Admin can check the profiles and he can accept or reject the profile. Admin can also see the list of approved profile. Super admin can add new admin and he can remove admin as well",
     technologies: "React.js, Redux,Tailwind CSS,",

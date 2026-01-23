@@ -15,7 +15,7 @@ export default function PortfolioModal({ item, onClose }: Props) {
 
   return (
     <div className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center px-4">
-      <div className="relative bg-[rgb(var(--bg-card))] max-w-4xl w-full rounded-2xl p-6 animate-drop-in border border-cyan-400/30 shadow-[0_0_40px_rgba(0,255,255,0.15)]">
+      <div className="relative bg-[rgb(var(--bg-card))] max-w-3xl w-full rounded-2xl p-6 animate-drop-in border border-cyan-400/30 shadow-[0_0_40px_rgba(0,255,255,0.15)]">
 
         {/* Close Button */}
         <button
@@ -33,8 +33,8 @@ export default function PortfolioModal({ item, onClose }: Props) {
           <Image
             src={item.images[index]}
             alt={item.title}
-            width={700}
-            height={400}
+            width={650}
+            height={200}
             className="rounded-xl object-contain max-h-[380px]"
             priority
           />
@@ -65,7 +65,7 @@ export default function PortfolioModal({ item, onClose }: Props) {
         </div>
 
         {/* Content */}
-        <div className="mt-6 ">
+        <div className="mt-3 ">
           <h3 className="text-xl font-semibold text-white">{item.title}</h3>
 
           <p className="mt-3 text-[rgb(var(--text-muted))] leading-relaxed">
@@ -82,7 +82,7 @@ export default function PortfolioModal({ item, onClose }: Props) {
             <a
               href={item.link}
               target="_blank"
-              className="inline-block mt-4 px-6 py-2 rounded-full border border-cyan-400 text-cyan-400
+              className="inline-block mt-4 px-6 py-1 rounded-full border border-cyan-400 text-cyan-400
                          hover:bg-cyan-400 hover:text-black
                          hover:shadow-[0_0_20px_rgba(0,255,255,0.8)]
                          transition"

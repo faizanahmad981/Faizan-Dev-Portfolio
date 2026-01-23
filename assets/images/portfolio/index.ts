@@ -28,7 +28,9 @@ import realstate from "@/assets/images/portfolio/realstate/mockupitem.png"
 import sellerMargin from "@/assets/images/portfolio/mockups/seller-margin.png"
 import truthkeep from "@/assets/images/portfolio/mockups/truthkeep.png"
 import rabbithole from "@/assets/images/portfolio/mockups/rabbithole.png"
-
+import rabbithole1 from "@/assets/images/portfolio/rabbit-hole/1.png"
+import rabbithole2 from "@/assets/images/portfolio/rabbit-hole/2.png"
+import rabbithole3 from "@/assets/images/portfolio/rabbit-hole/3.png"
 import ImageClassificationMain from "@/assets/images/portfolio/cnn-image-classification/cnn.png";
 import ImageClassification from "@/assets/images/portfolio/cnn-image-classification/carousal.png";
 import ImageClassification1 from "@/assets/images/portfolio/cnn-image-classification/carousal-1.png";
@@ -42,7 +44,7 @@ import Efamily3 from "@/assets/images/portfolio/efamily/efamily3.png";
 
 export {
   
-    rabbithole, fitnessGym,fitnessGym1,fitnessGym2,NexcentMain,Nexcent1,Nexcent2,foodiwebsiteMain,realstateMain ,
+   rabbithole1, rabbithole,rabbithole2,rabbithole3, fitnessGym,fitnessGym1,fitnessGym2,NexcentMain,Nexcent1,Nexcent2,foodiwebsiteMain,realstateMain ,
    fitness,lumina,realstate,sellerMargin,truthkeep,
     carouselImg,jointOfficeMain,carouselJointOffice,carouselJointOffice1,sellermargin,
     sellermargin1,sellermargin2,sellermargin3,sellermargin4,sellermargin5,sellermarginMockup,
