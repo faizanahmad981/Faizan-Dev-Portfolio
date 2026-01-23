@@ -66,7 +66,7 @@ export default function Banner({
   return (
     <section
       className=" relative  min-h-screen flex items-center 
-    z-10 pt-28 bg-no-repeat bg-top bg-cover
+    z-10   pt-24 sm:pt-0  bg-no-repeat bg-top bg-cover
     "
     >
       {/* Background layer */}
@@ -91,7 +91,7 @@ export default function Banner({
               </h5>
             </div>
 
-            <div className="  mt-8 flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+            <div className="  mt-8 flex flex-col sm:flex-row justify-center lg:justify-start gap-4 mb-4">
               {/* Hire Me */}
               <button
                 type="button"

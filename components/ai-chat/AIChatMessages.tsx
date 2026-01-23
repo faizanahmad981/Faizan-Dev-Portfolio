@@ -11,23 +11,23 @@ type Props = {
 export default function AIChatMessages({ messages, loading }: Props) {
   // Project keywords mapping
   const projectCards: Record<string, { name: string; link?: string }> = {
-    truthkeep: { name: "TruthKeep AI", link: "https://www.truthkeep.ai/" },
+    truthkeep: { name: "TruthKeep AI" },
     medimind: { name: "MediMind AI" },
     "joint office": { name: "Joint Office Detector", },
-    seller: { name: "Seller Margin CRM", link: "https://sellermargins-website.vercel.app/" },
-    rabbit: { name: "Rabbit Hole Dashboard", link: "https://rabbit-hole-admin-panel-nu.vercel.app/sign-in " },
+    seller: { name: "Seller Margin CRM" },
+    rabbit: { name: "Rabbit Hole Dashboard" },
     efamily: { name: "EFAMILY Platform" },
     cnn: { name: "Image Classification" },
-    lumina: { name: "Lumina Xpert", link: "https://lumina-xpert.vercel.app/" },
-    "real estate": { name: "Real Estate Website", link: "https://realstate-woad-seven.vercel.app/" },
-    fitness: { name: "Fitness Gym Website", link: "https://fitness-gym-seven.vercel.app/" },
-    nexcent: { name: "Nexcent Onepage", link: "https://nexcent-website-rho.vercel.app/" },
-    foodi: { name: "Foodi Onepage", link: " https://react-bootstrap-food-webapp.vercel.app/" },
+    lumina: { name: "Lumina Xpert" },
+    "real estate": { name: "Real Estate Website" },
+    fitness: { name: "Fitness Gym Website" },
+    nexcent: { name: "Nexcent Onepage" },
+    foodi: { name: "Foodi Onepage" },
   };
 
   // Mini stats/highlights mapping
   const miniStats: Record<string, string> = {
-    experience: "💼 2+ years of hands-on web development experience",
+    experience: "💼 1+ years of hands-on web development experience",
     react: "⚛ React & Next.js expertise",
     typescript: "📝 TypeScript & JavaScript proficiency",
     tailwind: "🎨 Tailwind CSS & Bootstrap styling skills",

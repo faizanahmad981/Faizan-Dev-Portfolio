@@ -32,10 +32,10 @@ export default function AIChatWidget() {
 
     // Mini stats/highlights based on question keywords
     const statsResponses: Record<string, string> = {
-      "experience": "💼 Faizan has 2 years of hands-on experience in Web Development, React, Next.js, API integrations, and frontend architectures.",
-      "react": "⚛️ Faizan has 2 years of professional experience building React applications.",
-      "next": "🚀 Faizan has 2 years of experience building scalable Next.js applications with SSR & SSG.",
-      "api": "🔗 Faizan has 2 years of experience integrating REST & GraphQL APIs in frontend projects.",
+      "experience": "💼 Faizan has 1+ years of hands-on experience in Web Development, React, Next.js, API integrations, and frontend architectures.",
+      "react": "⚛️ Faizan has 1 years of professional experience building React applications.",
+      "next": "🚀 Faizan has 1 years of experience building scalable Next.js applications with SSR & SSG.",
+      "api": "🔗 Faizan has 1 years of experience integrating REST & GraphQL APIs in frontend projects.",
     };
 
     for (const key in statsResponses) {

@@ -6,7 +6,7 @@ const ServicesMainPage = () => {
   return (
     <section
       id="services"
-      className="py-24 bg-transparent"
+      className="py-4 bg-transparent"
     >
       <div className="max-w-7xl mx-auto px-6">
 

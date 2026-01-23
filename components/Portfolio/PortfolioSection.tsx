@@ -11,7 +11,7 @@ export default function PortfolioSection() {
 
   return (
     <section id="portfolio" className=" bg-[rgb(var(--mesh-2))]">
-      <div className="container mx-auto px-6 py-12">
+      <div className="container mx-auto px-6 py-4">
 
         {/* Tabs */}
         <div className="flex  gap-4 mb-10">

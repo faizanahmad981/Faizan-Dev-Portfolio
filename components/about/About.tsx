@@ -71,14 +71,14 @@ export default function About() {
     <section
       id="about"
       className="
-        py-24
+        py-14
         bg-[radial-gradient(circle_at_top_left,rgb(var(--mesh-1)),rgb(var(--bg-main)))]
       "
     >
       <div className="max-w-7xl mx-auto px-6 ">
 
         {/* ================= TOP GRID ================= */}
-        <div className="grid lg:grid-cols-2  items-center ">
+        <div className="grid lg:grid-cols-2  gap-6 items-center ">
 
           {/* ---------- IMAGE ---------- */}
           <div

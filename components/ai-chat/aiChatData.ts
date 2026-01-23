@@ -41,8 +41,11 @@ const intentKeywords: Record<Intent, string[]> = {
   projects: [
     "project",
     "projects",
+      "Projects",
     "work",
+    "Work",
     "portfolio",
+     "Portfolio",
     "apps",
     "applications",
     "websites",
@@ -173,11 +176,10 @@ const responses: Record<Intent, string> = {
     "🤔 I didn’t fully understand that.\n\nTry asking about:\n• About Faizan\n• Projects\n• Skills\n• Experience\n• Services\n• Education\n• Contact details",
 };
 const miniStats: Record<string, string> = {
-  experience: "💼 2+ years of hands-on web development experience",
+  experience: "💼 1+ years of hands-on web development experience",
   react: "⚛ React & Next.js expertise",
   typescript: "📝 TypeScript & JavaScript proficiency",
   tailwind: "🎨 Tailwind CSS & Bootstrap styling skills",
-  ai: "🤖 AI & ML integration experience",
   redux: "🔁 Redux & state management experience",
   api: "🔗 API Integration & RESTful services",
   uiux: "🎨 Clean & modern UI/UX implementation",

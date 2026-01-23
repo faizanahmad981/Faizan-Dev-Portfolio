@@ -8,7 +8,7 @@ export default function TechnicalSkills() {
       id="technical-skills"
       className="  bg-(--gradient-banner-mesh)"
     >
-      <div className="max-w-7xl container mx-auto px-6 py-12">
+      <div className="max-w-7xl container mx-auto px-6 py-4">
 
         {/* HEADER */}
         <div className="text-center mb-14">
