@@ -38,19 +38,9 @@ export type PortfolioItem = {
 };
 
 export const portfolioItems: PortfolioItem[] = [
-  {
-   id: 1,
-    title: "TruthKeep AI Base",
-    category: "popular",
-    cover: truthkeep,
-    images: [truthkeep, truthkeep, truthkeep, truthkeep, truthkeep],
-    description:
-      "AI based web application that gathers politicians articles and generates sentiment scores. Includes AI chatbot.",
-    technologies: "Python, Scikit-Learn, Pandas, React.js",
-    link: "https://www.truthkeep.ai/",
-  },
+ 
    {
-    id: 2,
+    id: 1,
     title: "Seller Margin website & CRM",
     category: "popular",
     cover: sellerMargin,
@@ -61,7 +51,7 @@ export const portfolioItems: PortfolioItem[] = [
     link: "https://sellermargins-website.vercel.app/",
   },
   {
-    id: 3,
+    id: 2,
     title: "Rabbit Hole",
     category: "popular",
     cover: rabbithole,
@@ -72,7 +62,7 @@ export const portfolioItems: PortfolioItem[] = [
     link: "https://rabbit-hole-admin-panel-nu.vercel.app/sign-in",
   },
    {
-    id: 4,
+    id: 3,
     title: "Joint Office Detector",
     category: "popular",
     cover: jointOfficeMain,
@@ -83,7 +73,7 @@ export const portfolioItems: PortfolioItem[] = [
   },
   
    {
-    id: 5,
+    id: 4,
     title: "Fitness GYM",
     category: "popular",
     cover: fitness,
@@ -94,7 +84,7 @@ export const portfolioItems: PortfolioItem[] = [
     link: "https://fitness-gym-seven.vercel.app/",
   },
    {
-    id: 6,
+    id: 5,
     title: "Lumina-Xpert",
     category: "popular",
     cover: lumina,
@@ -105,7 +95,7 @@ export const portfolioItems: PortfolioItem[] = [
     link: "https://lumina-xpert.vercel.app/",
   },
   {
-    id: 7,
+    id: 6,
     title: "Image Classification using CNN",
     category: "others",
     cover: ImageClassificationMain,
@@ -115,7 +105,7 @@ export const portfolioItems: PortfolioItem[] = [
     technologies: "Flask, React Native, Python, TensorFlow",
   },
   {
-    id: 8,
+    id: 7,
     title: "EFAMILY",
     category: "others",
     cover: Efamily,
@@ -125,7 +115,7 @@ export const portfolioItems: PortfolioItem[] = [
     technologies: "React Native,Firebase, Redux",
   },
   {
-    id: 9,
+    id: 8,
     title: "Foodi-onepage-website",
     category: "others",
     cover: foodiwebsiteMain,
@@ -136,7 +126,7 @@ export const portfolioItems: PortfolioItem[] = [
     link: "https://react-bootstrap-food-webapp.vercel.app/",
   },
   {
-    id: 10,
+    id: 9,
     title: "Real State website-onepage-website",
     category: "others",
     cover: realstateMain,
@@ -147,7 +137,7 @@ export const portfolioItems: PortfolioItem[] = [
     link: "https://realstate-woad-seven.vercel.app/",
   },
    {
-    id: 11,
+    id: 10,
     title: "Nexcent-onepage-website",
     category: "others",
     cover: NexcentMain,

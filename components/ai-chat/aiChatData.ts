@@ -34,8 +34,8 @@ const intentKeywords: Record<Intent, string[]> = {
     "yourself",
     "intro",
     "profile",
-    "truth keep",
-    "truthkeep",
+   
+    
   ],
 
   projects: [
@@ -125,7 +125,6 @@ const responses: Record<Intent, string> = {
 
  projects:
     "🚀 Faizan has worked on multiple real-world projects including:\n" +
-    "• TruthKeep AI – AI-based platform\n" +
     "• Seller Margin CRM Website\n" +
     "• Rabbit Hole – Admin Panel Dashboard\n" +
     "• Fitness Gym Website\n" +
@@ -186,11 +185,7 @@ const miniStats: Record<string, string> = {
 };
 // 5️⃣ Main AI function
 const specificProjectResponses: Record<string, string> = {
-  truthkeep: `TruthKeep AI is an AI-powered fact verification platform developed by Faizan Ahmed.
-
-• Uses Large Language Models (LLMs) to analyze and verify information
-• Focuses on misinformation detection and trust-based insights
-• Demonstrates API integration, AI logic, and clean UI design`,
+  
 
   medimind: `MediMind-AI is a medical diagnosis and precautions web application.
 
