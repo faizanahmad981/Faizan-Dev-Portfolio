@@ -15,12 +15,20 @@ export default function PortfolioModal({ item, onClose }: Props) {
 
   return (
     <div className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center px-4">
-      <div className="relative bg-[rgb(var(--bg-card))] max-w-3xl w-full rounded-2xl p-6 animate-drop-in border border-cyan-400/30 shadow-[0_0_40px_rgba(0,255,255,0.15)]">
+      <div className="
+      relative bg-[rgb(var(--bg-card))]
+  max-w-3xl w-full
+  rounded-2xl
+  p-4 sm:p-6
+  pt-12 sm:pt-6
+  animate-drop-in
+  border border-cyan-400/30
+  shadow-[0_0_40px_rgba(0,255,255,0.15)]">
 
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full
+          className="absolute top-2 right-2 w-10 h-10 flex items-center justify-center rounded-full
                      bg-black/60 border border-cyan-400/40 text-cyan-300
                      hover:text-white hover:shadow-[0_0_15px_rgba(0,255,255,0.8)]
                      transition"
