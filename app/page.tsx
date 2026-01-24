@@ -16,7 +16,7 @@ export default function Home() {
     <main className="min-h-screen bg-[rgb(var(--background))] text-[rgb(var(--foreground))] ">
 
       
-      
+     <div className="px"></div> 
       <Navbar/>
       <Banner/>
       <About/>

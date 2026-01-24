@@ -75,7 +75,7 @@ export default function About() {
         bg-[radial-gradient(circle_at_top_left,rgb(var(--mesh-1)),rgb(var(--bg-main)))]
       "
     >
-      <div className="max-w-7xl mx-auto px-6 ">
+      <div className="max-w-7xl mx-auto px-6 w-full">
 
         {/* ================= TOP GRID ================= */}
         <div className="grid lg:grid-cols-2  gap-6 items-center ">

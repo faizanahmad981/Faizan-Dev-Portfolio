@@ -62,7 +62,7 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <nav className="container mx-auto px-4 h-20 flex items-center justify-between">
+      <nav className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         {/* Logo */}
         <span className="text-xl font-semibold text-white">
           Faizan<span className="text-cyan-400">Dev</span>

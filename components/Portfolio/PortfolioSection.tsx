@@ -10,8 +10,8 @@ export default function PortfolioSection() {
   const [selected, setSelected] = useState<PortfolioItem | null>(null);
 
   return (
-    <section id="portfolio" className=" bg-[rgb(var(--mesh-2))]">
-      <div className="container mx-auto px-6 py-4">
+    <section id="portfolio" className=" bg-[rgb(var(--mesh-2))] py-4">
+      <div className="max-w-7xl mx-auto px-6 w-full">
 
         {/* Tabs */}
         <div className="flex  gap-4 mb-10">

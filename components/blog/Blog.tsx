@@ -40,8 +40,8 @@ const blogs: Blog[] = [
 
 const Blog: React.FC = () => {
   return (
-    <section id="blog" className=" bg-[rgb(var(--mesh-2))]">
-      <div className="container mx-auto px-6">
+    <section id="blog" className=" bg-[rgb(var(--mesh-2))] py-4">
+      <div className="max-w-7xl mx-auto px-6 w-full">
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-[rgb(var(--text-primary))] mb-2">

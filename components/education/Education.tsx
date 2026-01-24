@@ -35,8 +35,8 @@ const educationData: EducationItem[] = [
 
 const Education: React.FC = () => {
   return (
-    <section id="education" className=" bg-[rgb(var(--mesh-2))]">
-      <div className="container mx-auto px-6  py-4">
+    <section id="education" className=" bg-[rgb(var(--mesh-2))] py-4">
+      <div className="max-w-7xl mx-auto px-6 w-full">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-[rgb(var(--text-primary))]">
             EDUCATION

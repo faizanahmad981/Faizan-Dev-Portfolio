@@ -8,7 +8,7 @@ const ServicesMainPage = () => {
       id="services"
       className="py-4 bg-transparent"
     >
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6 w-full">
 
         {/* ================= HEADER ================= */}
         <div className="text-center mb-14">

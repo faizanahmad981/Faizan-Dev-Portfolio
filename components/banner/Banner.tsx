@@ -72,7 +72,7 @@ export default function Banner({
       {/* Background layer */}
       <div className="absolute inset-0 hero-bg -z-10" />
 
-      <div className="container mx-auto px-6 ">
+      <div className="max-w-7xl mx-auto px-6 w-full ">
         <div className="flex flex-col-reverse lg:flex-row items-center min-h-screen gap-8">
           {/* TEXT CONTENT */}
           <div className="lg:w-7/12 text-center lg:text-left">
