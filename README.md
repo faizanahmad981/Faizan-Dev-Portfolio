@@ -69,7 +69,7 @@ Example projects included:
 
 - Displays badges when AI response includes certain keywords.
 - Example stats:
-  - 💼 2+ years of hands-on web development experience
+  - 💼 1+ years of hands-on web development experience
   - ⚛ React & Next.js expertise
   - 📝 TypeScript & JavaScript proficiency
   - 🎨 Tailwind CSS & Bootstrap styling skills
