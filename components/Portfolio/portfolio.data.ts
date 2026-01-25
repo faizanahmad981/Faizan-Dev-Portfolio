@@ -93,7 +93,7 @@ export const portfolioItems: PortfolioItem[] = [
     description:
       "Developed a complete front-end website for LuminaXpert, a fictional remote software company, as a part of my personal learning and practice. Designed and implemented a responsive, modern UI using HTML, CSS, JavaScript, and React.js. Focused on clean layout, component reusability, and responsive design across all screen sizes. Practiced professional front-end development workflows and UI/UX principles. This project helped strengthen my skills in building full-scale website interfaces and enhanced my confidence in front-end development best practices",
     technologies: "React js Bootstrap",
-    link: "https://lumina-xpert.vercel.app/",
+    link: "https://luminaaa-xpert.vercel.app/",
   },
   {
     id: 6,

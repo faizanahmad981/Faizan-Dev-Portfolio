@@ -49,7 +49,7 @@ export default function AIChatWidget() {
       "truthkeep": "[TruthKeep AI](https://www.truthkeep.ai/)",
       "seller": "[Seller Margin CRM](https://sellermargins-website.vercel.app/)",
       "rabbit": "[Rabbit Hole Dashboard](https://rabbit-hole-admin-panel-nu.vercel.app/sign-in)",
-      "lumina": "[Lumina Xpert](https://lumina-xpert.vercel.app/)",
+      "lumina": "[Lumina Xpert](https://luminaaa-xpert.vercel.app/)",
       "real estate": "[Real Estate Website](https://realstate-woad-seven.vercel.app/)",
       "fitness": "[Fitness Gym Website](https://fitness-gym-seven.vercel.app/)",
       "nexcent": "[Nexcent Onepage](https://nexcent-website-rho.vercel.app/)",
