@@ -109,16 +109,17 @@ const intentKeywords: Record<Intent, string[]> = {
 // 4️⃣ Responses
 const responses: Record<Intent, string> = {
   greeting:
-    "👋 Hi! I’m Faizan’s AI Portfolio Assistant.\n\n" +
-    "You can ask me about:\n" +
-    "• About Faizan\n" +
-    "• Projects\n" +
-    "• Skills\n" +
-    "• Services\n" +
-    "• Experience\n" +
-    "• Education\n" +
+     "👋 Hi! I’m Faizan’s AI Portfolio Assistant.\n\n" +
+     
+    "You can ask me about:<br/>" +
+    "• About Faizan\n\n" +
+    "• Projects\n\n" +
+    "• Skills\n\n" +
+    "• Services\n\n" +
+    "• Experience\n\n" +
+    "• Education\n\n" +
     "• Contact details\n\n" +
-    "I’ll respond like a real portfolio assistant 🙂",
+    "I’ll respond like a real portfolio assistant",
 
   about:
     "Faizan Ahmed Tanoli is a Frontend & AI-focused Web Developer who builds modern, scalable, and pixel-perfect web applications using Next.js, React, TypeScript, and Tailwind CSS.",
